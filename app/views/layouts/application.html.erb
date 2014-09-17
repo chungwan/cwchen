@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="ccwstyle.css" />
+</head>
+<a name="pagetop"></a>
+<body class = "container">
+
+<div class="body_container">
+  
+  <header><!-- Global Header -->
+    <div class="header_global">
+      <div class="header_title"><%= image_tag "cclogo.jpg" %></div>
+      <div class="header_nav">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Resume', home_resume_path %> | <%= link_to 'Portfolio', home_portfolio_path %> | <%= link_to 'About', home_about_path %> | <%= link_to 'Contact', home_contact_path %>  | <%= link_to 'Printable Resume', "/resources/resume_cchen.pdf" %> |</div>
+    </div>
+  </header>
+  
+  
+  
+
+<%= yield %>
+
+
+  
+
+    <footer><!-- Global Footer -->
+    <div class="footer_global">
+      <div class="footer_nav">| <%= link_to 'Summary', home_index_path %> | <%= link_to 'Resume', home_resume_path %> | <%= link_to 'Portfolio', home_portfolio_path %> | <%= link_to 'About', home_about_path %> | <%= link_to 'Contact', home_contact_path %>  | <%= link_to 'Printable Resume', "/resources/resume_cchen.pdf" %> |<br /><span class="footer_text">This website is built with Ruby on Rails by Christine Chen and deployed through Github and Heroku.</div>
+    </div>
+    </footer>
+
+
+</div>
+</body>
+</html>
